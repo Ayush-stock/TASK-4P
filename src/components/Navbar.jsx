@@ -1,32 +1,29 @@
+
+import { Link } from "react-router-dom";
+
 function Navbar() {
     return (
-        <nav className="navbar">
-            <div className="nav-container">
+        <nav className="task-navbar">
+            <div className="task-nav-inner">
+                <Link to="/" className="task-logo">
+                    DEV@Deakin
+                </Link>
 
-                <h2>DEV@Deakin</h2>
+                <div className="task-search-box">
+                    <input
+                        type="search"
+                        placeholder="Search..."
+                        aria-label="Search"
+                    />
+                </div>
 
-                <ul>
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
+                <Link to="/post" className="task-nav-link">
+                    Post
+                </Link>
 
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-
-                    <li>
-                        <a href="#articles">Articles</a>
-                    </li>
-
-                    <li>
-                        <a href="#tutorials">Tutorials</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-
+                <Link to="/login" className="task-nav-link">
+                    Login
+                </Link>
             </div>
         </nav>
     );
