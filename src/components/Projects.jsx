@@ -1,3 +1,4 @@
+
 const projects = [
     {
         id: 1,
@@ -6,7 +7,6 @@ const projects = [
         description:
             "A personal website created using HTML and CSS."
     },
-
     {
         id: 2,
         title: "Simple Calculator",
@@ -17,48 +17,26 @@ const projects = [
 ];
 
 function Projects() {
-
     return (
-        <section className="projects-section">
-
+        <section id="projects" className="projects-section">
             <h1>Featured Projects</h1>
 
             <div className="projects">
-
                 {projects.map((project) => (
-
-                    <div
-                        className="project"
-                        key={project.id}
-                    >
-
+                    <div className="project" key={project.id}>
                         <img
                             src={project.image}
                             alt={project.title}
                         />
 
                         <div className="project-info">
-
-                            <h2>
-                                {project.title}
-                            </h2>
-
-                            <p>
-                                {project.description}
-                            </p>
-
-                            <a href="#">
-                                View Project
-                            </a>
-
+                            <h2>{project.title}</h2>
+                            <p>{project.description}</p>
+                            <a href="#">View Project</a>
                         </div>
-
                     </div>
-
                 ))}
-
             </div>
-
         </section>
     );
 }

@@ -2,6 +2,28 @@
 import { Link } from "react-router-dom";
 
 function Navbar() {
+    function handleSearch(event) {
+        event.preventDefault();
+
+        const search = event.target.search.value
+            .trim()
+            .toLowerCase();
+
+        const sections = {
+            about: "about",
+            projects: "projects",
+            articles: "articles",
+            tutorials: "tutorials",
+            contact: "contact"
+        };
+
+        const sectionId = sections[search];
+
+        if (sectionId) {
+            window.location.href = "/#" + sectionId;
+        }
+    }
+
     return (
         <nav className="task-navbar">
             <div className="task-nav-inner">
@@ -9,13 +31,17 @@ function Navbar() {
                     DEV@Deakin
                 </Link>
 
-                <div className="task-search-box">
+                <form
+                    className="task-search-box"
+                    onSubmit={handleSearch}
+                >
                     <input
                         type="search"
+                        name="search"
                         placeholder="Search..."
-                        aria-label="Search"
+                        aria-label="Search sections"
                     />
-                </div>
+                </form>
 
                 <Link to="/post" className="task-nav-link">
                     Post

@@ -740,3 +740,30 @@ footer {
         font-size: 13px;
     }
 }
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+section,
+footer {
+    scroll-margin-top: 20px;
+}
+
+.section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px;
+}
+
+.section-nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+.section-nav a:hover {
+    text-decoration: underline;
+}

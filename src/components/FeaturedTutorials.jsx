@@ -1,13 +1,10 @@
+
 function FeaturedTutorials() {
     return (
-        <section
-            id="tutorials"
-            className="featured-section"
-        >
+        <section id="tutorials" className="featured-section">
             <h1>Featured Tutorials</h1>
 
             <div className="card-container">
-
                 <div className="tutorial-card">
                     <img
                         src="/images/laptop.png"
@@ -20,11 +17,8 @@ function FeaturedTutorials() {
                         Learn how to create reusable React components.
                     </p>
 
-                    <p>
-                        ★ 5
-                    </p>
+                    <p>★ 5</p>
                 </div>
-
 
                 <div className="tutorial-card">
                     <img
@@ -38,11 +32,8 @@ function FeaturedTutorials() {
                         Learn the basics of creating modern websites.
                     </p>
 
-                    <p>
-                        ★ 5
-                    </p>
+                    <p>★ 5</p>
                 </div>
-
 
                 <div className="tutorial-card">
                     <img
@@ -56,17 +47,13 @@ function FeaturedTutorials() {
                         Learn important JavaScript concepts.
                     </p>
 
-                    <p>
-                        ★ 4.9
-                    </p>
+                    <p>★ 4.9</p>
                 </div>
-
             </div>
 
             <button className="see-more">
                 See all tutorials
             </button>
-
         </section>
     );
 }

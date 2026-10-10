@@ -1,3 +1,4 @@
+
 import ArticleCard from "./ArticleCard";
 
 const articles = [
@@ -10,7 +11,6 @@ const articles = [
         rating: 5,
         image: "/images/tech.png"
     },
-
     {
         id: 2,
         title: "Understanding Web Development",
@@ -20,7 +20,6 @@ const articles = [
         rating: 5,
         image: "/images/web.png"
     },
-
     {
         id: 3,
         title: "Building Modern Applications",
@@ -33,34 +32,22 @@ const articles = [
 ];
 
 function FeaturedArticles() {
-
     return (
-        <section
-            id="articles"
-            className="featured-section"
-        >
-
-            <h1>
-                Featured Articles
-            </h1>
+        <section id="articles" className="featured-section">
+            <h1>Featured Articles</h1>
 
             <div className="card-container">
-
                 {articles.map((article) => (
-
                     <ArticleCard
                         key={article.id}
                         article={article}
                     />
-
                 ))}
-
             </div>
 
             <button className="see-more">
                 See all articles
             </button>
-
         </section>
     );
 }
